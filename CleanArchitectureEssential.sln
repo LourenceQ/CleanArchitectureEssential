@@ -5,13 +5,21 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchMvc.Domain", "CleanArchMvc.Domain\CleanArchMvc.Domain.csproj", "{3A8F0F29-C8FC-484B-BBB4-C728BEBDCB50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchMvc.Application", "CleanArchMvc.Application\CleanArchMvc.Application.csproj", "{DFAA2739-0B2C-4105-88DD-AF755306F7BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchMvc.Application", "CleanArchMvc.Application\CleanArchMvc.Application.csproj", "{DFAA2739-0B2C-4105-88DD-AF755306F7BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchMvc.Infra.Data", "CleanArchMvc.Infra.Data\CleanArchMvc.Infra.Data.csproj", "{31A8D28E-2020-49FC-9584-07FEBB11472D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchMvc.Infra.Data", "CleanArchMvc.Infra.Data\CleanArchMvc.Infra.Data.csproj", "{31A8D28E-2020-49FC-9584-07FEBB11472D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchMvc.Infra.IoC", "CleanArchMvc.Infra.IoC\CleanArchMvc.Infra.IoC.csproj", "{3E4A0018-6F2F-4E31-9CDF-D3EE72A528CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchMvc.Infra.IoC", "CleanArchMvc.Infra.IoC\CleanArchMvc.Infra.IoC.csproj", "{3E4A0018-6F2F-4E31-9CDF-D3EE72A528CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchMvc.WebUI", "CleanArchMvc.WebUI\CleanArchMvc.WebUI.csproj", "{896ADF0F-D23C-4347-B782-991269D509DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchMvc.WebUI", "CleanArchMvc.WebUI\CleanArchMvc.WebUI.csproj", "{896ADF0F-D23C-4347-B782-991269D509DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Application", "1 - Application", "{7A7115A7-13D9-4521-AE2D-C3E14097A409}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{E1401EA0-18BB-4030-A1F6-959AD4FFA578}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infra", "3 - Infra", "{22518E26-4880-4F07-B37F-6D237041BC56}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Service", "4 - Service", "{34A2E857-F45F-4A3C-9237-92C826ACB56C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +50,13 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3A8F0F29-C8FC-484B-BBB4-C728BEBDCB50} = {E1401EA0-18BB-4030-A1F6-959AD4FFA578}
+		{DFAA2739-0B2C-4105-88DD-AF755306F7BB} = {7A7115A7-13D9-4521-AE2D-C3E14097A409}
+		{31A8D28E-2020-49FC-9584-07FEBB11472D} = {22518E26-4880-4F07-B37F-6D237041BC56}
+		{3E4A0018-6F2F-4E31-9CDF-D3EE72A528CF} = {22518E26-4880-4F07-B37F-6D237041BC56}
+		{896ADF0F-D23C-4347-B782-991269D509DD} = {34A2E857-F45F-4A3C-9237-92C826ACB56C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6B1CCD43-A48B-4AA8-84C5-F7B9D5F51420}
