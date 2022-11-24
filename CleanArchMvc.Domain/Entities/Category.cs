@@ -12,6 +12,7 @@ public sealed class Category
     {
         ValidateDomain(name);
     }
+
     public Category(int id, string name)
     {
         DomainExceptionValidation.When(id < 0, "Id inválido.");
@@ -26,5 +27,10 @@ public sealed class Category
 
         DomainExceptionValidation.When(name.Length < 3
             , "Nome inválido. Mínimo de 3 caracteres.");
+    }
+
+    public void Update(string name)
+    {
+        ValidateDomain(name);
     }
 }
