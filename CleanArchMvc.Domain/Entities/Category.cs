@@ -22,7 +22,7 @@ public sealed class Category : BaseEntity
     private void ValidateDomain(string name)
     {
         DomainExceptionValidation.When(string.IsNullOrEmpty(name)
-            , "Nome inválido. Nome é obrigatório");
+            , "Nome inválido. Nome é obrigatório.");
 
         DomainExceptionValidation.When(name.Length < 3
             , "Nome inválido. Mínimo de 3 caracteres.");
