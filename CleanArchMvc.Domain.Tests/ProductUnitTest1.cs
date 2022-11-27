@@ -49,7 +49,7 @@ public class ProductUnitTest1
     }
 
     [Fact(DisplayName = "Crate Product With Valid State")]
-    public void CreateProduct_WithNullImageName_NoDomainExceptionInvalidName()
+    public void CreateProduct_WithNullImageName_NoDomainException()
     {
         Action action = () => new Product(1, "Product name"
             , "Product Description", 9.9m, 99, null);
@@ -86,6 +86,15 @@ public class ProductUnitTest1
         action.Should()
             .Throw<CleanArchMvc.Domain.Validation.DomainExceptionValidation>()
             .WithMessage("Nome inválido. Mínimo de 3 caracteres.");
+    }
+
+    [Fact(DisplayName = "Crate Product With Valid State")]
+    public void CreateProduct_WithNullImageName_NoNullReferenceException()
+    {
+        Action action = () => new Product(1, "Product name"
+            , "Product Description", 9.9m, 99, null);
+        action.Should()
+            .NotThrow<NullReferenceException>();
     }
 
 }

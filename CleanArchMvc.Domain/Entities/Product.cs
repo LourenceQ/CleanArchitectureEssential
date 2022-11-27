@@ -50,7 +50,7 @@ public sealed class Product : BaseEntity
         DomainExceptionValidation.When(stock < 0
             , "Valor de estoque inválido.");
         
-        DomainExceptionValidation.When(image.Length > 199
+        DomainExceptionValidation.When(image?.Length > 199
             , "Nome inválido. Máximo de 200 caracteres.");
 
         Name = name;
