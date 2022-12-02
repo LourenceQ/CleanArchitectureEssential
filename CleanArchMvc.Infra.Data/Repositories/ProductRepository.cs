@@ -29,7 +29,7 @@ public class ProductRepository : IProductRepository
 
     public async Task<Product> GetProductCategoryAsync(int? id)
     {
-        // eager loading
+        // eagger loading
         return await _contextProduct.Products
             .Include(c => c.Category)
             .SingleOrDefaultAsync(p => p.Id == id);
