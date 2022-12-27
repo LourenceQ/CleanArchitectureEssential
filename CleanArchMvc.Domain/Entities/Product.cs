@@ -24,6 +24,10 @@ public sealed class Product : BaseEntity
         ValidateDomain(name, description, price, stock, image);
     }
 
+    public Product()
+    {
+    }
+
     public void Update(string name, string description, decimal price, int stock, string image, int categoryId)
     {
         ValidateDomain(name, description, price, stock, image);

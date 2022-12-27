@@ -19,6 +19,10 @@ public sealed class Category : BaseEntity
         ValidateDomain(name);
     }
 
+    public Category()
+    {
+    }
+
     private void ValidateDomain(string name)
     {
         DomainExceptionValidation.When(string.IsNullOrEmpty(name)
