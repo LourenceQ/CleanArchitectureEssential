@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AutoMapper;
+using CleanArchMvc.Application.DTOs;
+using CleanArchMvc.Domain.Entities;
 
-namespace CleanArchMvc.Application.Mappings
+namespace CleanArchMvc.Application.Mappings;
+
+public class EntityToDtoMappingProfile : Profile
 {
-    internal class EntityToDtoMappingProfile
-    {
-    }
+	public EntityToDtoMappingProfile()
+	{
+		CreateMap<Category, CategoryDTO>().ReverseMap();
+		CreateMap<Product, ProductDTO>().ReverseMap();	
+	}
 }
