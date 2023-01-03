@@ -1,10 +1,12 @@
 ﻿using AutoMapper;
+using CleanArchMvc.Application.DTOs;
+using CleanArchMvc.Application.Interfaces;
 using CleanArchMvc.Domain.Entities;
 using CleanArchMvc.Domain.Interfaces;
 
 namespace CleanArchMvc.Application.Services;
 
-public class ProductService : IProductRepository
+public class ProductService : IProductService
 {
     private readonly IProductRepository _repository;
     private readonly IMapper _mapper;
@@ -16,33 +18,44 @@ public class ProductService : IProductRepository
         _repository = repository;
     }
 
-    public Task<Product> CreateAsync(Product product)
+    public async Task Add(ProductDTO productDTO)
     {
-        throw new NotImplementedException();
+        var prod = _mapper.Map<Product>(productDTO);
+
+        await _repository.CreateAsync(prod);
     }
 
-    public Task<Product> GetByIdAsync(int? id)
+    public async Task<ProductDTO> GetById(int? id)
     {
-        throw new NotImplementedException();
+        var product = await _repository.GetByIdAsync(id);
+
+        return _mapper.Map<ProductDTO>(product);
     }
 
-    public Task<Product> GetProductCategoryAsync(int? id)
+    public async Task<ProductDTO> GetProductCategory(int? id)
     {
-        throw new NotImplementedException();
+        var productCategory = await _repository.GetProductCategoryAsync(id);
+
+        return _mapper.Map<ProductDTO>(productCategory)
     }
 
-    public Task<IEnumerable<Product>> GetProductsAsync()
+    public async Task<IEnumerable<ProductDTO>> GetProducts()
     {
-        throw new NotImplementedException();
+        var product = await _repository.GetProductsAsync();
+
+        return _mapper.Map<IEnumerable<ProductDTO>>(product);
     }
 
-    public Task<Product> RemoveAsync(Product product)
+    public async Task Remove(int? id)
     {
-        throw new NotImplementedException();
+        var prod = _repository.GetByIdAsync(id).Result;   
+        await _repository.RemoveAsync(prod);
     }
 
-    public Task<Product> UpdateAsync(Product product)
+    public async Task Update(ProductDTO productDTO)
     {
-        throw new NotImplementedException();
+        var prod = _mapper.Map<Product>(productDTO);
+
+        await _repository.UpdateAsync(prod);
     }
 }
