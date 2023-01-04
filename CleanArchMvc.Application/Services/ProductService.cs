@@ -36,7 +36,7 @@ public class ProductService : IProductService
     {
         var productCategory = await _repository.GetProductCategoryAsync(id);
 
-        return _mapper.Map<ProductDTO>(productCategory)
+        return _mapper.Map<ProductDTO>(productCategory);
     }
 
     public async Task<IEnumerable<ProductDTO>> GetProducts()
