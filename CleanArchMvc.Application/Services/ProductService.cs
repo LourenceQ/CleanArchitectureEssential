@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using CleanArchMvc.Application.DTOs;
 using CleanArchMvc.Application.Interfaces;
+using CleanArchMvc.Application.Products.Commands;
 using CleanArchMvc.Application.Products.Queries;
 using CleanArchMvc.Domain.Entities;
 using CleanArchMvc.Domain.Interfaces;
@@ -24,26 +25,37 @@ public class ProductService : IProductService
         //_repository = repository;
     }
 
-    /*public async Task Add(ProductDTO productDTO)
+    public async Task Add(ProductDTO productDTO)
     {
-        var prod = _mapper.Map<Product>(productDTO);
+        var p = _mapper.Map<ProductCreateCommand>(productDTO);
 
-        await _repository.CreateAsync(prod);
+        await _mediator.Send(p);
     }
 
     public async Task<ProductDTO> GetById(int? id)
     {
-        var product = await _repository.GetByIdAsync(id);
+        var p = new GetProductByIdQuery(id.Value);
 
-        return _mapper.Map<ProductDTO>(product);
+        if (p == null)
+            throw new Exception($"Entity coud not be loaded.");
+
+        var result = await _mediator.Send(p);
+
+        return _mapper.Map<ProductDTO>(result);
+
     }
 
     public async Task<ProductDTO> GetProductCategory(int? id)
     {
-        var productCategory = await _repository.GetProductCategoryAsync(id);
+        var p = new GetProductByIdQuery(id.Value);
 
-        return _mapper.Map<ProductDTO>(productCategory);
-    }*/
+        if (p == null)
+            throw new Exception($"Entity coud not be loaded.");
+
+        var result = await _mediator.Send(p);
+
+        return _mapper.Map<ProductDTO>(result);
+    }
 
     public async Task<IEnumerable<ProductDTO>> GetProducts()
     {
@@ -60,16 +72,19 @@ public class ProductService : IProductService
 
     }
 
-    /*public async Task Remove(int? id)
+    public async Task Remove(int? id)
     {
-        var prod = _repository.GetByIdAsync(id).Result;   
-        await _repository.RemoveAsync(prod);
+        var p = new ProductRemoveCommand(id.Value);
+        if (p == null)
+            throw new Exception($"Entity coud not be loaded.");
+
+        await _mediator.Send(p);
     }
 
     public async Task Update(ProductDTO productDTO)
     {
-        var prod = _mapper.Map<Product>(productDTO);
+        var p = _mapper.Map<ProductUpdateCommand>(productDTO);
 
-        await _repository.UpdateAsync(prod);
-    }*/
+        await _mediator.Send(p);
+    }
 }
