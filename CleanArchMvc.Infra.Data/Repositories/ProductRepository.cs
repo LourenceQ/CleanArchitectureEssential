@@ -24,16 +24,19 @@ public class ProductRepository : IProductRepository
 
     public async Task<Product> GetByIdAsync(int? id)
     {
-        return await _contextProduct.Products.FindAsync(id);
+        ;// return await _contextProduct.Products.FindAsync(id);
+        return await _contextProduct.Products
+           .Include(c => c.Category)
+           .SingleOrDefaultAsync(p => p.Id == id);
     }
 
-    public async Task<Product> GetProductCategoryAsync(int? id)
+    /*public async Task<Product> GetProductCategoryAsync(int? id)
     {
         // eagger loading
         return await _contextProduct.Products
             .Include(c => c.Category)
             .SingleOrDefaultAsync(p => p.Id == id);
-    }
+    }*/
 
     public async Task<IEnumerable<Product>> GetProductsAsync()
     {

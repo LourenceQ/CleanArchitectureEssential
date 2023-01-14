@@ -45,7 +45,7 @@ public class ProductService : IProductService
 
     }
 
-    public async Task<ProductDTO> GetProductCategory(int? id)
+    /*public async Task<ProductDTO> GetProductCategory(int? id)
     {
         var p = new GetProductByIdQuery(id.Value);
 
@@ -55,7 +55,7 @@ public class ProductService : IProductService
         var result = await _mediator.Send(p);
 
         return _mapper.Map<ProductDTO>(result);
-    }
+    }*/
 
     public async Task<IEnumerable<ProductDTO>> GetProducts()
     {
