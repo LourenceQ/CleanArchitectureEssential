@@ -1,0 +1,23 @@
+﻿@model CleanArchMvc.Application.DTOs.CategoryDTO
+
+<h3>Delete Category</h3>
+
+<h4>Are you sure you want to delte this?</h4>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-m-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Name)
+        </dd>
+    </dl>
+
+    <form aps-action="Delete">
+        <input type="hidden" asp-for="Id"/>
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
