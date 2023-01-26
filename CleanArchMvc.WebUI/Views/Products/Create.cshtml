@@ -20,10 +20,48 @@
         </div>
 
         <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-success" />
-                <a asp-action="Index" class="btn btn-info">Back to List</a>
+            <label asp-for="Description" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Description" class="form-control" />
+                <a asp-validation-for ="Description" class="text-danger"></a>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Image" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Image" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Price" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Price" class="form-control" />
+                <a asp-validation-for="Price" class="text-danger"></a>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Stock" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Stock" class="form-control" />
+                <a asp-validation-for="Stock" class="text-danger"></a>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="CategoryId" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="CategoryId" class="form-control" />
+                <a asp-validation-for="CategoryId" class="text-danger"></a>
             </div>
         </div>
     </div>
+
+</form>
+
+<form asp-action="Create">
+    
 </form>

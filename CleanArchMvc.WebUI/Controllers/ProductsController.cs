@@ -18,4 +18,10 @@ public class ProductsController : Controller
         var products = await _productService.GetProducts();
         return View(products);
     }
+
+    [HttpGet()]
+    public IActionResult Create()
+    {
+        return View();
+    }
 }
