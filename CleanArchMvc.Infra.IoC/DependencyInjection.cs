@@ -29,7 +29,7 @@ public static class DependencyInjection
         services.AddScoped<IProductService, ProductService>();
         services.AddScoped<ICategoryService, CategoryService>();
         services.AddAutoMapper(typeof(EntityToDtoMappingProfile));
-        services.AddMediatR(myHandlers) ;
+        services.AddMediatR(myHandlers);
 
         return services;
     }

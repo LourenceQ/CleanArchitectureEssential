@@ -35,7 +35,7 @@ public class ProductsController : Controller
     [HttpPost]
     public async Task<IActionResult> Create(ProductDTO productDto)
     {
-        if(ModelState.IsValid) 
+        if (ModelState.IsValid)
         {
             await _productService.Add(productDto);
             return RedirectToAction(nameof(Index));

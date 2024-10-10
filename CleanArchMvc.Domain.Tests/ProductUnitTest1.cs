@@ -78,7 +78,7 @@ public class ProductUnitTest1
     }
 
     [Theory]
-    [InlineData (-5)]
+    [InlineData(-5)]
     public void CreateProduct_WithInvalidStockValue_ExceptionDomainNegativeValue(int value)
     {
         Action action = () => new Product(1, "Pr"

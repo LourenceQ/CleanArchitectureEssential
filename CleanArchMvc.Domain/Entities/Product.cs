@@ -17,7 +17,7 @@ public sealed class Product : BaseEntity
         ValidateDomain(name, description, price, stock, image);
     }
 
-    public Product(int id, string name, string description, decimal price, int stock , string image) 
+    public Product(int id, string name, string description, decimal price, int stock, string image)
     {
         DomainExceptionValidation.When(id < 0, "Invalid Id value.");
         Id = id;
@@ -38,22 +38,22 @@ public sealed class Product : BaseEntity
     {
         DomainExceptionValidation.When(string.IsNullOrEmpty(name)
             , "Nome inválido. Nome é obrigatório.");
-        
+
         DomainExceptionValidation.When(name.Length < 3
             , "Nome inválido. Mínimo de 3 caracteres.");
-        
+
         DomainExceptionValidation.When(string.IsNullOrEmpty(description)
             , "Nome inválido. Descrição é obrigatório.");
-        
+
         DomainExceptionValidation.When(description.Length < 3
             , "Descrição inválida. Mínimo de 3 caracteres.");
-        
+
         DomainExceptionValidation.When(price < 0
             , "Valor de preço inválido.");
-        
+
         DomainExceptionValidation.When(stock < 0
             , "Valor de estoque inválido.");
-        
+
         DomainExceptionValidation.When(image?.Length > 199
             , "Nome inválido. Máximo de 200 caracteres.");
 

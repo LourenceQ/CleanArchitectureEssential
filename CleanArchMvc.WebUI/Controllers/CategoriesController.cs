@@ -29,7 +29,7 @@ public class CategoriesController : Controller
     [HttpPost]
     public async Task<IActionResult> Create(CategoryDTO category)
     {
-        if(ModelState.IsValid)
+        if (ModelState.IsValid)
         {
             await _categoryService.Add(category);
             return RedirectToAction(nameof(Index));

@@ -3,8 +3,6 @@ using CleanArchMvc.Application.DTOs;
 using CleanArchMvc.Application.Interfaces;
 using CleanArchMvc.Application.Products.Commands;
 using CleanArchMvc.Application.Products.Queries;
-using CleanArchMvc.Domain.Entities;
-using CleanArchMvc.Domain.Interfaces;
 using MediatR;
 
 namespace CleanArchMvc.Application.Services;
@@ -63,7 +61,7 @@ public class ProductService : IProductService
 
         return _mapper.Map<IEnumerable<ProductDTO>>(product);*/
 
-        GetProductsQuery p = new() ;
+        GetProductsQuery p = new();
         if (p == null) throw new Exception($"Entity could not be loaded.");
 
         var result = await _mediator.Send(p);
