@@ -25,6 +25,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchMvc.Domain.Tests",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Tests", "5 - Tests", "{4F878CD9-E82C-4827-9492-87E0BA881AF4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{8C7D0A73-F2B3-451A-BDEE-414A189FA0A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloboTicket.TicketManagmente.Domain", "GloboTicket.TicketManagmente.Domain\GloboTicket.TicketManagmente.Domain.csproj", "{F7CEB311-5B09-4F81-B5C5-0F0EC2C5FF96}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +59,10 @@ Global
 		{25610DFB-E455-46C7-9D5B-E4919D691F6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25610DFB-E455-46C7-9D5B-E4919D691F6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25610DFB-E455-46C7-9D5B-E4919D691F6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7CEB311-5B09-4F81-B5C5-0F0EC2C5FF96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7CEB311-5B09-4F81-B5C5-0F0EC2C5FF96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7CEB311-5B09-4F81-B5C5-0F0EC2C5FF96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7CEB311-5B09-4F81-B5C5-0F0EC2C5FF96}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +74,7 @@ Global
 		{3E4A0018-6F2F-4E31-9CDF-D3EE72A528CF} = {22518E26-4880-4F07-B37F-6D237041BC56}
 		{896ADF0F-D23C-4347-B782-991269D509DD} = {34A2E857-F45F-4A3C-9237-92C826ACB56C}
 		{25610DFB-E455-46C7-9D5B-E4919D691F6F} = {4F878CD9-E82C-4827-9492-87E0BA881AF4}
+		{F7CEB311-5B09-4F81-B5C5-0F0EC2C5FF96} = {8C7D0A73-F2B3-451A-BDEE-414A189FA0A3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6B1CCD43-A48B-4AA8-84C5-F7B9D5F51420}
