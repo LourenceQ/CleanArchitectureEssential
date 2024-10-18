@@ -6,6 +6,6 @@ namespace GloboTicket.TicketManagmente.Domain.Entities
     {
         public Guid CategoryId { get; set; }
         public string Name { get; set; } = string.Empty;
-        public ICollection<Order>?  Events{ get; set; }
+        public ICollection<Order>? Events { get; set; }
     }
 }
