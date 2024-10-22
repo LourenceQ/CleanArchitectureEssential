@@ -27,7 +27,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Tests", "5 - Tests", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{8C7D0A73-F2B3-451A-BDEE-414A189FA0A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloboTicket.TicketManagmente.Domain", "GloboTicket.TicketManagmente.Domain\GloboTicket.TicketManagmente.Domain.csproj", "{F7CEB311-5B09-4F81-B5C5-0F0EC2C5FF96}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloboTicket.TicketManagment.Domain", "GloboTicket.TicketManagmente.Domain\GloboTicket.TicketManagment.Domain.csproj", "{F7CEB311-5B09-4F81-B5C5-0F0EC2C5FF96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloboTicket.TicketManagment.Application", "GloboTicket.TicketManagmente.Application\GloboTicket.TicketManagment.Application.csproj", "{3612EEDA-DA8F-4146-B263-AB4D65298E32}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{F7CEB311-5B09-4F81-B5C5-0F0EC2C5FF96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7CEB311-5B09-4F81-B5C5-0F0EC2C5FF96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7CEB311-5B09-4F81-B5C5-0F0EC2C5FF96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3612EEDA-DA8F-4146-B263-AB4D65298E32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3612EEDA-DA8F-4146-B263-AB4D65298E32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3612EEDA-DA8F-4146-B263-AB4D65298E32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3612EEDA-DA8F-4146-B263-AB4D65298E32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,6 +81,7 @@ Global
 		{896ADF0F-D23C-4347-B782-991269D509DD} = {34A2E857-F45F-4A3C-9237-92C826ACB56C}
 		{25610DFB-E455-46C7-9D5B-E4919D691F6F} = {4F878CD9-E82C-4827-9492-87E0BA881AF4}
 		{F7CEB311-5B09-4F81-B5C5-0F0EC2C5FF96} = {8C7D0A73-F2B3-451A-BDEE-414A189FA0A3}
+		{3612EEDA-DA8F-4146-B263-AB4D65298E32} = {8C7D0A73-F2B3-451A-BDEE-414A189FA0A3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6B1CCD43-A48B-4AA8-84C5-F7B9D5F51420}
