@@ -1,4 +1,5 @@
-﻿using GloboTicket.TicketManagment.Application.Features.Events;
+﻿using GloboTicket.TicketManagment.Application.Features.Events.Queries.GetEventDetail;
+using GloboTicket.TicketManagment.Application.Features.Events.Queries.GetEventList;
 using GloboTicket.TicketManagmente.Domain.Entities;
 
 namespace GloboTicket.TicketManagment.Application.Features.Profile

@@ -2,7 +2,7 @@
 using GloboTicket.TicketManagment.Application.Contracts.Persistance;
 using MediatR;
 
-namespace GloboTicket.TicketManagment.Application.Features.Events
+namespace GloboTicket.TicketManagment.Application.Features.Events.Queries.GetEventList
 {
     public class GetEventListQueryHandler : IRequestHandler<GetEventListQuery, List<EventListVm>>
     {
@@ -18,7 +18,7 @@ namespace GloboTicket.TicketManagment.Application.Features.Events
 
         public async Task<List<EventListVm>> Handle(GetEventListQuery request, CancellationToken cancellationToken)
         {
-            IReadOnlyList<EventArgs> allEvents = (await _eventRepository.ListAllAsync());
+            IReadOnlyList<EventArgs> allEvents = await _eventRepository.ListAllAsync();
 
             return _mapper.Map<List<EventListVm>>(allEvents);
         }

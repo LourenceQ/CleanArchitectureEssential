@@ -1,4 +1,4 @@
-﻿namespace GloboTicket.TicketManagment.Application.Features.Events
+﻿namespace GloboTicket.TicketManagment.Application.Features.Events.Queries.GetEventDetail
 {
     public class EventDetailVm
     {
@@ -10,7 +10,7 @@
         public string Description { get; set; }
         public string ImageUrl { get; set; }
         public Guid CategoryId { get; set; }
-        
+
         public CategoryDto Category { get; set; }
     }
 }

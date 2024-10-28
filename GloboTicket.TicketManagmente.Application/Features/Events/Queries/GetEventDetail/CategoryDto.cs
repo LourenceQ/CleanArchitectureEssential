@@ -1,4 +1,4 @@
-﻿namespace GloboTicket.TicketManagment.Application.Features.Events
+﻿namespace GloboTicket.TicketManagment.Application.Features.Events.Queries.GetEventDetail
 {
     public class CategoryDto
     {
