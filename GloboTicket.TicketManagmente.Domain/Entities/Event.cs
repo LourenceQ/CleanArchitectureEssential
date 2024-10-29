@@ -2,7 +2,7 @@
 {
     public class Event
     {
-        public Guid EventID { get; set; }
+        public Guid EventId { get; set; }
         public string Name { get; set; } = string.Empty;
         public int Price { get; set; }
         public string? Artist { get; set; }
