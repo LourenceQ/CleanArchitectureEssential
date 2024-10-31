@@ -20,6 +20,7 @@ namespace GloboTicket.TicketManagment.Application.Features.Events.Commands.Updat
         public async Task Handle(UpdateEventCommand request, CancellationToken cancellationToken)
         {
             var eventToUpdate = _eventRepository.GetByIdAsync(request.EventId);
+
             _mapper.Map(request, eventToUpdate, typeof(UpdateEventCommand), typeof(Event));
 
             await _eventRepository.UpdateAsync(eventToUpdate);
