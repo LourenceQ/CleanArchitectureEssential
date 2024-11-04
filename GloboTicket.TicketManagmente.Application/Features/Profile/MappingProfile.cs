@@ -1,4 +1,5 @@
 ﻿using GloboTicket.TicketManagment.Application.Features.Categories.Queries.GetCategoriesList;
+using GloboTicket.TicketManagment.Application.Features.Categories.Queries.GetCategoriesListWithEvents;
 using GloboTicket.TicketManagment.Application.Features.Events.Commands.CreateEvent;
 using GloboTicket.TicketManagment.Application.Features.Events.Queries.GetEventDetail;
 using GloboTicket.TicketManagment.Application.Features.Events.Queries.GetEventList;
