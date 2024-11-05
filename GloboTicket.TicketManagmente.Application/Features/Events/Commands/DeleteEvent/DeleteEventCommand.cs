@@ -1,6 +1,8 @@
-﻿namespace GloboTicket.TicketManagment.Application.Features.Events.Commands.DeleteEvent
+﻿using MediatR;
+
+namespace GloboTicket.TicketManagment.Application.Features.Events.Commands.DeleteEvent
 {
-    public class DeleteEventCommand
+    public class DeleteEventCommand : IRequest
     {
         public Guid EventId { get; set; }
     }
