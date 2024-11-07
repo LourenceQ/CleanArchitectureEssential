@@ -19,7 +19,7 @@ namespace GloboTicket.TicketManagment.Application.Features.Categories.Queries.Ge
         public async Task<List<CategoryEventListVm>> Handle(GetCategoriesListWithEventsQuery request, CancellationToken cancellationToken)
         {
             List<TicketManagmente.Domain.Entities.Category> list = await _categoryRepository.GetCategoriesListWithEventsQuery(request.IncludeHistory);
-            
+
             return _mapper.Map<List<CategoryEventListVm>>(list);
         }
     }

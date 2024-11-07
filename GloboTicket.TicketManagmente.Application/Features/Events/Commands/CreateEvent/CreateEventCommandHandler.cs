@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using FluentValidation.Results;
 using GloboTicket.TicketManagment.Application.Contracts.Persistance;
+using GloboTicket.TicketManagment.Application.Features.Events.Commands.DeleteEvent;
 using GloboTicket.TicketManagmente.Domain.Entities;
 using MediatR;
 
@@ -18,6 +20,10 @@ public class CreateEventCommandHandler : IRequestHandler<CreateEventCommand, Gui
 
     public async Task<Guid> Handle(CreateEventCommand request, CancellationToken cancellationToken)
     {
+        CreateEventCommandValidator validator = new CreateEventCommandValidator();
+        ValidationResult validtionResult = await validator
+            .ValidateAsync(request, cancellationToken);
+
         Event @event = _mapper.Map<Event>(request);
         @event = await _eventRepository.AddAsync(@event);
 

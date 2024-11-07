@@ -10,7 +10,7 @@ public class CreateEventCommandValidator : AbstractValidator<CreateEventCommand>
         RuleFor(p => p.Name).NotEmpty().WithMessage("").NotNull().MaximumLength(50).WithMessage("");
 
         RuleFor(p => p.Date).NotEmpty().WithMessage("").NotNull().GreaterThan(DateTime.Now);
-        
+
         RuleFor(p => p.Price).NotEmpty().WithMessage("").GreaterThan(0);
     }
 }
