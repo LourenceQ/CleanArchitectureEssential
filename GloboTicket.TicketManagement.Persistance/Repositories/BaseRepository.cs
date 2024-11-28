@@ -6,6 +6,11 @@ public class BaseRepository<T> : IAsyncRepository<T> where T : class
 {
     protected readonly GloboTicketDbContext _dbContext;
 
+    public BaseRepository(GloboTicketDbContext dbContext)
+    {
+        _dbContext = dbContext;
+    }
+
     public Task<T> AddAsync(T entity)
     {
         throw new NotImplementedException();
